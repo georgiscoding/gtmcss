@@ -165,9 +165,17 @@ a {
   width: 40px;
 }
 
+.icon--small {
+  height: 30px;
+  width: 30px;
+}
 .icon--primary {
   /* fill works only with svg */
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -180,6 +188,9 @@ a {
   width: 64px;
 }
 
+.icon-container--accent {
+  background: var(--color-accent);
+}
 /* Buttons */
 
 /*  For button elements browser does box-sizing to border-box. But for anchor element buttons we need to add it universally. look at top*/
@@ -451,5 +462,35 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min_width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
